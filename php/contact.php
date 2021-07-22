@@ -27,6 +27,9 @@
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1".'X-Mailer: PHP/' . phpversion();
 
 
+	
+
+
 	$to = "adanyur@gmail.com";
     $send = mail($to, $subject, $body, $headers);
 
