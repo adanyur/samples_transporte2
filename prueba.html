@@ -7,50 +7,17 @@
     <title>Document</title>
     <style type="text/css">
       .table__border {
-        /* border-radius: 2rem; */
-        /* border: 1px solid #dadce0; */
-        border: 1px solid #e1ebf7;
-        /* border: 1px solid #f15f22; */
         width: 50%;
       }
 
-      .img__ {
-        opacity: 0.5;
-      }
-      .mr {
-        margin-right: 2rem;
-      }
-
-      .title__ {
-        text-align: left;
-        color: #2c234d;
-      }
-
-      .title__right {
-        text-align: right;
-        /* color: #64676c; */
-        color: #57667e;
-      }
-
-      .title__,
-      .title__right {
-        padding: 0.2rem;
-        font-size: 1em;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      .container__table {
-        display: flex;
-        justify-content: space-around;
-      }
-      /**/
       .img__container {
-        width: 100%;
+        width: 50%;
         height: 350px;
+        padding: 2rem 1rem;
       }
 
       .img__background {
-        background-image: url("./assets/img/hero/h1_hero.jpg");
+        background-image: url("https://misionya.com/clients/mrbedoya/catalogo/cargo1/assets/img/hero/h1_hero.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -93,14 +60,16 @@
       .text__body {
         text-align: justify;
         color: #a4acc3;
-        padding: 0.5rem;
       }
-
-      .title__coment {
-        /* border: 1px solid red; */
+      span {
+        color: #a4acc3;
+        margin-left: 0.5rem;
       }
-
       .p__0 {
+        padding: 1rem;
+      }
+
+      .pt__0 {
         padding: 0.5rem 1rem;
       }
     </style>
@@ -119,27 +88,37 @@
             class="table__border"
           >
             <tr>
-              <td class="container__table">
-                <div class="img__container">
-                  <div class="img__background">
-                    <div class="container__text">
-                      <div class="title__head">
-                        <div class="label__text p__0">Name</div>
-                        <div class="label__text p__0">Email</div>
-                      </div>
-                      <div class="title__coment">
-                        <div class="label__text p__0">Comentario</div>
-                        <div class="text__body p__0">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Mollitia consectetur reprehenderit impedit
-                          blanditiis voluptatem ab veritatis tempore quam
-                          doloremque molestiae omnis animi, quibusdam nihil rem
-                          ipsam totam voluptas? Porro, aliquam?
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <td>
+                <table class="img__background">
+                  <tr>
+                    <td>
+                      <table align="left" class="img__container">
+                        <tr>
+                          <td class="label__text pt__0">
+                            Name: <span>yur</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="label__text pt__0">
+                            Email: <span>yur</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="label__text pt__0">Comentario:</td>
+                        </tr>
+                        <tr>
+                          <td class="text__body pt__0">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Mollitia consectetur reprehenderit impedit
+                            blanditiis voluptatem ab veritatis tempore quam
+                            doloremque molestiae omnis animi, quibusdam nihil
+                            rem ipsam totam voluptas? Porro, aliquam?
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
           </table>

@@ -15,46 +15,13 @@
 		<title>Document</title>
 		<style type="text/css">
 		  .table__border {
-			/* border-radius: 2rem; */
-			/* border: 1px solid #dadce0; */
-			border: 1px solid #e1ebf7;
-			/* border: 1px solid #f15f22; */
 			width: 50%;
 		  }
 	
-		  .img__ {
-			opacity: 0.5;
-		  }
-		  .mr {
-			margin-right: 2rem;
-		  }
-	
-		  .title__ {
-			text-align: left;
-			color: #2c234d;
-		  }
-	
-		  .title__right {
-			text-align: right;
-			/* color: #64676c; */
-			color: #57667e;
-		  }
-	
-		  .title__,
-		  .title__right {
-			padding: 0.2rem;
-			font-size: 1em;
-			font-family: Arial, Helvetica, sans-serif;
-		  }
-	
-		  .container__table {
-			display: flex;
-			justify-content: space-around;
-		  }
-		  /**/
 		  .img__container {
-			width: 100%;
+			width: 50%;
 			height: 350px;
+			padding: 2rem 1rem;
 		  }
 	
 		  .img__background {
@@ -101,14 +68,16 @@
 		  .text__body {
 			text-align: justify;
 			color: #a4acc3;
-			padding: 0.5rem;
 		  }
-	
-		  .title__coment {
-			/* border: 1px solid red; */
+		  span {
+			color: #a4acc3;
+			margin-left: 0.5rem;
 		  }
-	
 		  .p__0 {
+			padding: 1rem;
+		  }
+	
+		  .pt__0 {
 			padding: 0.5rem 1rem;
 		  }
 		</style>
@@ -124,26 +93,36 @@
 				align="center"
 				cellpadding="0"
 				cellspacing="0"
-				class="table__border"
+				class="table__border" cellpadding="0" cellspacing="0"
 			  >
 				<tr>
-				  <td class="container__table">
-					<div class="img__container">
-					  <div class="img__background">
-						<div class="container__text">
-						  <div class="title__head">
-							<div class="label__text p__0">Name: <span>'.$name.'</span></div>
-							<div class="label__text p__0">Email: <span>'.$from.'<span></div>
-						  </div>
-						  <div class="title__coment">
-							<div class="label__text p__0">Comentario</div>
-							<div class="text__body p__0">
+				  <td>
+					<table class="img__background" cellpadding="0" cellspacing="0">
+					  <tr>
+						<td>
+						  <table align="left" class="img__container">
+							<tr>
+							  <td class="label__text pt__0">
+								Name: <span>'.$name.'</span>
+							  </td>
+							</tr>
+							<tr>
+							  <td class="label__text pt__0">
+								Email: <span>'.$from.'</span>
+							  </td>
+							</tr>
+							<tr>
+							<td class="label__text pt__0">Comentario:</td>
+						  </tr>
+						  <tr>
+							<td class="text__body pt__0">
 							  '.$cmessage.'
-							</div>
-						  </div>
-						</div>
-					  </div>
-					</div>
+							</td>
+						  </tr>
+						  </table>
+						</td>
+					  </tr>
+					</table>
 				  </td>
 				</tr>
 			  </table>
@@ -152,6 +131,8 @@
 		</table>
 	  </body>
 	</html>
+	
+	
 	';
 
 
@@ -162,7 +143,7 @@
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1".'X-Mailer: PHP/' . phpversion();
 	$to = "marcosbedoya@gmail.com";
-	
+
 	$send = mail($to, $subject, $body, $headers);
 
 ?>
